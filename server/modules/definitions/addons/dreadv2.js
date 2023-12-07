@@ -1192,6 +1192,27 @@ module.exports = ({ Class }) => {
 			},
 		)
 	}
+	Class.tornadoOfficialV2 = {
+	    PARENT: ["genericTrinought"],
+	    LABEL: "Tornado",
+	    GUNS: [],
+	}
+	for (let i = 0; i < 3; i++) {
+		Class.tornadoOfficialV2.TURRETS.push(
+			{
+				POSITION: [7, 8.5, 5, 120*i, 190, 0],
+				TYPE: "converterTurretOfficialV2"
+			},
+			{
+				POSITION: [7, 8.5, -5, 120*i, 190, 0],
+				TYPE: "converterTurretOfficialV2"
+			},
+			{
+				POSITION: [9, 8.5, 0, 120*i, 190, 0],
+				TYPE: "converterTurretOfficialV2"
+			},
+		)
+	}
 
 	// T3 Bodies
 	Class.mechanismOfficialV2 = {
@@ -1478,7 +1499,7 @@ module.exports = ({ Class }) => {
 	for (let i = 0; i < 3; i++) {
 		Class.moonOfficialV2.TURRETS.push(
 			{
-				POSITION: [3.5, 10.5, 0, 120*i+60, 360, 1],
+				POSITION: [2, 10.5, 0, 120*i+60, 360, 1],
 				TYPE: "trinoughtSmallHealAura",
 			},
 		)
@@ -1490,7 +1511,7 @@ module.exports = ({ Class }) => {
 	for (let i = 0; i < 3; i++) {
 		Class.titanTopOfficialV2.GUNS.push(
 			{
-				POSITION: [5, 26, 0.001, 8, 0, 120*i, 0],
+				POSITION: [2, 26, 0.001, 8, 0, 120*i, 0],
 				PROPERTIES: {COLOR: 9},
 			},
 		)
@@ -2417,6 +2438,7 @@ module.exports = ({ Class }) => {
 						Class.luciferOfficialV2.UPGRADES_TIER_0 = [];
 
                                              Class.converterOfficialV2.UPGRADES_TIER_0 = ["melderOfficialV2", "windOfficialV2"];
+                                                           Class.windOfficialV2.UPGRADES_TIER_0 = ["tornadoOfficialV2"];
 
 		Class.dreadBodyOfficialV2.UPGRADES_TIER_0 = ["byteOfficialV2", "atmosphereOfficialV2", "juggernautOfficialV2", "menderOfficialV2"];
 
